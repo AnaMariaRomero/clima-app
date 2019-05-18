@@ -1,0 +1,20 @@
+<div class="contenedorBusqueda">
+  <mat-form-field class="letraBusqueda">
+      <input matInput (keyup)="ingresoCiudad($event.target.value)" placeholder="Ingrese ciudad">
+  </mat-form-field>
+  <mat-form-field class="letraBusqueda">
+
+
+      <input matInput (keyup)="ingresoPais($event.target.value)" placeholder="Ingrese pais">
+  </mat-form-field>
+</div>
+
+<div  class="datosMostrados">
+  <div [class]="tipoLetra">{{current.date | date:'EEEE MMM d'}}</div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div [class]="tipoLetra" (window:resize)="onResize($event)">Temperatura: {{current.temperature | number: '1.0-0'}}</div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div [class]="tipoLetra">Visibilidad: {{current.visibility}}</div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <img [src]= 'current.image' class="imagen1">
+</div>

@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div fxLayout="row" class="header">
+  <app-header></app-header>
+</div>
+<div fxLayout="column" class="contenedorCard" (window:resize)="onResize($event)">
+    <mat-card>
+      <mat-card-header class="headerCard">
+        <mat-card-title [class]="typography0"> Clima actual</mat-card-title>
+      </mat-card-header>
+        <app-clima></app-clima>
+    </mat-card>
+</div>
+
+<router-outlet></router-outlet>
